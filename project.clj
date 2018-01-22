@@ -1,4 +1,4 @@
-(defproject qlkit-material-ui "0.1.0-SNAPSHOT"
+(defproject qlkit-material-ui "0.2.0-SNAPSHOT"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -12,8 +12,7 @@
                  [org.clojure/clojurescript "1.9.946"]
                  [org.clojure/core.async  "0.3.443"]
                  [cljsjs/material-ui "0.19.2-0"]
-                 [qlkit "0.1.0-SNAPSHOT"]
-                 ;; https://github.com/madvas/cljs-react-material-ui
+                 [qlkit "0.2.0-SNAPSHOT"]
                  [cljs-react-material-ui "0.2.48"]
                  [cljsjs/react "15.6.1-1"]
                  [cljsjs/react-dom "15.6.1-1"]]
