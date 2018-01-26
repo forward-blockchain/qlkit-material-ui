@@ -1069,6 +1069,7 @@
     :toggle-check-box                                   
     :toggle-indeterminate-check-box                     
     :toggle-radio-button-checked                        
-    :toggle-radio-button-unchecked                      
+    :toggle-radio-button-unchecked
+    :toggle-star
     :toggle-star-border                                 
     :toggle-star-half})
