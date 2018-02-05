@@ -3,7 +3,8 @@
             [cljsjs.material-ui-svg-icons :as mi]
             [qlkit.core :as ql]
             [react :refer [createElement]]
-            [clojure.string :as st]))
+            [clojure.string :as st]
+            [goog.object :refer [get]]))
 
 (declare material-ui material-ui-components material-ui-icons)
 
@@ -18,7 +19,7 @@
   (doseq [[k v] material-ui-components]
     (ql/register-component k v))
   (doseq [v material-ui-icons]
-    (ql/register-component v (aget js/MaterialUISvgIcons (upcase (name v)))))
+    (ql/register-component v (get js/MaterialUISvgIcons (upcase (name v)))))
   (reset! ql/make-root-component
           (fn make-root-component [children]
             (createElement (material-ui :MuiThemeProvider)
@@ -26,7 +27,7 @@
                            children))))
 
 (defn- material-ui [key]
-  (or (aget js/MaterialUI (name key))
+  (or (get js/MaterialUI (name key))
       (throw (str "Unknown material-ui component " (name key)))))
 
 (def ^:private material-ui-components
