@@ -10,7 +10,7 @@
                  [org.clojure/clojurescript "1.9.946"]
                  [org.clojure/core.async  "0.3.443"]
                  [cljsjs/material-ui "1.0.0-beta.33-0"]
-                 [qlkit "0.2.0-SNAPSHOT"]]
+                 [qlkit "0.3.0-SNAPSHOT"]]
 
   :plugins [[lein-figwheel "0.5.14"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]
