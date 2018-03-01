@@ -43,7 +43,7 @@
                  :with-styles
                  :with-theme
                  :with-width)
-         (to-kebab-case-map js/MaterialUISvgIcons "Icon" ".")))
+         (to-kebab-case-map js/MaterialUISvgIcons "Icon" "/")))
 
 (defn enable-material-ui! []
   "Configure Qlkit for Material-UI React components.  Call this before calling `qlkit.qlkit/mount."
