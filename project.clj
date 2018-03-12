@@ -9,6 +9,7 @@
   :dependencies [[org.clojure/clojure "1.9.0-beta4"]
                  [org.clojure/clojurescript "1.9.946"]
                  [cljsjs/material-ui "1.0.0-beta.33-0"]
+                 [qlkit-renderer "0.3.0-SNAPSHOT"] ;; We don't depend on this but lib consumers may, so it's here as a convenience for them
                  [qlkit "0.3.0-SNAPSHOT"]]
 
   :plugins [[lein-figwheel "0.5.14"]
