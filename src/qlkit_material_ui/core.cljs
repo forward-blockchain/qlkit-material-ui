@@ -1,6 +1,6 @@
 (ns qlkit-material-ui.core
   (:require [cljsjs.material-ui :as my]
-            [cljsjs.material-ui-svg-icons :as mi]
+            [material-ui-icons :as mi]
             [qlkit.core :as ql]
             [react :refer [createElement]]
             [clojure.string :as st]
@@ -43,7 +43,7 @@
                  :with-styles
                  :with-theme
                  :with-width)
-         (to-kebab-case-map js/MaterialUISvgIcons "Icon" "/")))
+         (to-kebab-case-map js/MaterialUIIcons "Icon" "/"))) 
 
 (defn enable-material-ui! []
   "Configure Qlkit for Material-UI React components.  Call this before calling `qlkit.qlkit/mount."
@@ -54,4 +54,4 @@
   (sort (keys (js->clj js/MaterialUI))))
 
 (def available-icons
-  (sort (keys (js->clj js/MaterialUISvgIcons))))
+  (sort (keys (js->clj js/MaterialUIIcons))))
