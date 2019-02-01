@@ -1,4 +1,4 @@
-(defproject qlkit-material-ui "0.3.2-SNAPSHOT"
+(defproject qlkit-material-ui "0.4.0-SNAPSHOT"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -6,11 +6,11 @@
   
   :min-lein-version "2.7.1"
 
-  :dependencies [[org.clojure/clojure "1.9.0-beta4"]
+  :dependencies [[org.clojure/clojure "1.10.339"]
                  [org.clojure/clojurescript "1.9.946"]
                  [cljsjs/material-ui "3.2.0-0"]
                  [cljsjs/material-ui-icons "3.0.1-0"]
-                 [qlkit-renderer "0.3.0-SNAPSHOT"] ;; We don't depend on this but lib consumers may, so it's here as a convenience for them
+                 [qlkit-renderer "0.4.0-SNAPSHOT"] ;; We don't depend on this but lib consumers may, so it's here as a convenience for them
                  [qlkit "0.3.0-SNAPSHOT"]]
 
   :plugins [[lein-figwheel "0.5.14"]
