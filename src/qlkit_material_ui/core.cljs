@@ -22,11 +22,20 @@
                    (skewer s)))))
   ([s] (to-kebab-case s nil nil)))
 
+(defn- obj->clj
+  [obj]
+  (-> (fn [result key]
+        (let [v (goog.object/get obj key)]
+          (if (= "function" (goog/typeOf v))
+            result
+            (assoc result key v))))
+      (reduce {} (.getKeys goog/object obj))))
+
 (defn- to-kebab-case-map
   "Convert a Javascript Object to a Clojure map, with the keys converted from Javascript-style names
    to idiomatic Clojure-style keywords.  If prefix is given, it's added to the front, separated by a '.'."
   ([js-obj prefix separator] (->> js-obj
-                                  js->clj
+                                  obj->clj
                                   (map (fn [[nm obj]]
                                          {(to-kebab-case nm prefix separator)
                                           obj}))

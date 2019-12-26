@@ -1,6 +1,6 @@
 {:paths   ["src" "resources"]
  :deps    {org.clojure/clojurescript {:mvn/version "1.10.516"}
-           cljsjs/material-ui        {:mvn/version "3.9.1-0"}
-           cljsjs/material-ui-icons  {:mvn/version "3.0.1-0"}
-           qlkit-renderer            {:mvn/version "0.4.0-SNAPSHOT"}
-           qlkit                     {:mvn/version "0.4.0-SNAPSHOT"}}}
+           cljsjs/material-ui        {:mvn/version "4.5.1-0"}
+           cljsjs/material-ui-icons  {:mvn/version "4.4.1-0"}
+           qlkit-renderer {:local/root "../qlkit-renderer"}
+           qlkit {:local/root "../qlkit"}}}
